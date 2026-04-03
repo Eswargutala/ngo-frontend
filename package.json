@@ -1,0 +1,35 @@
+{
+  "name": "ngo-ecommerce-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NGO website with e-commerce platform - Monorepo",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:app": "turbo run dev --filter=@ngo-ecommerce/frontend --filter=@ngo-ecommerce/backend --filter=@ngo-ecommerce/shared",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "test": "turbo run test",
+    "ci:local": "turbo run lint && turbo run type-check && turbo run build",
+    "hooks:install": "node -e \"console.log('Use: .\\\\scripts\\\\install-hooks.ps1 (Windows) or ./scripts/install-hooks.sh (Linux/Mac)')\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "eslint": "^8.56.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.2.4",
+    "turbo": "^1.12.0",
+    "typescript": "^5.3.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

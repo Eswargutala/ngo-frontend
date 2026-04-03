@@ -1,0 +1,5 @@
+# Ignore ad-hoc scripts that are not part of the app build
+src/fix*.js
+src/map_pages.js
+src/temp.js
+src/updateDonation.js
