@@ -13,32 +13,34 @@ export default function Testimonials() {
       title: 'This program gave me clarity.',
       description: 'A student shares how career guidance helped in choosing the right path.',
       category: '🎓 Student Story',
-      videoId: 'dQw4w9WgXcQ' // Placeholder - replace with actual video ID
+      videoId: 'dQw4w9WgXcQ', // Placeholder - replace with actual video ID
     },
     {
       title: 'Now I earn with dignity.',
       description: 'A participant explains how skill training created income opportunities.',
       category: '👩‍💼 Women Empowerment',
-      videoId: 'dQw4w9WgXcQ' // Placeholder - replace with actual video ID
-    }
+      videoId: 'dQw4w9WgXcQ', // Placeholder - replace with actual video ID
+    },
   ];
 
   const textTestimonials = [
     {
       emoji: '🎓',
       quote: 'Now I know what I want to become.',
-      text: 'Before joining, I was confused. With proper guidance, I now have direction and confidence.',
+      text: 'I’m grateful for the support I received. It truly made a difference in my life',
       author: 'Ravi Kumar',
       role: 'Student',
-      avatar: 'https://images.unsplash.com/photo-1647934786533-f3c15896410b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtYWxlJTIwc3R1ZGVudCUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDM3NjU0Nnww&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1647934786533-f3c15896410b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtYWxlJTIwc3R1ZGVudCUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDM3NjU0Nnww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       emoji: '🎯',
       quote: 'This program changed my thinking.',
-      text: 'The mentorship helped me understand my strengths and make better decisions.',
+      text: 'Their guidance changed my life and gave me hope for a better future.',
       author: 'Anjali',
-      role: 'Career Guidance',
-      avatar: 'https://images.unsplash.com/photo-1761125050322-bbfc155571bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmZW1hbGUlMjBzdHVkZW50JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzc0Mzc2NTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080'
+      role: 'Women Empoverment',
+      avatar:
+        'https://images.unsplash.com/photo-1761125050322-bbfc155571bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmZW1hbGUlMjBzdHVkZW50JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzc0Mzc2NTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       emoji: '🎭',
@@ -46,7 +48,8 @@ export default function Testimonials() {
       text: 'Drama sessions helped me overcome fear and express myself.',
       author: 'Student Participant',
       role: 'Skill Development',
-      avatar: 'https://images.unsplash.com/photo-1756885375569-f04400d99cee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHN0dWRlbnQlMjBpbmRpYSUyMGNvbmZpZGVudHxlbnwxfHx8fDE3NzQzNzY1NDd8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1756885375569-f04400d99cee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHN0dWRlbnQlMjBpbmRpYSUyMGNvbmZpZGVudHxlbnwxfHx8fDE3NzQzNzY1NDd8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       emoji: '🩺',
@@ -54,7 +57,8 @@ export default function Testimonials() {
       text: 'Awareness sessions helped our community improve daily habits.',
       author: 'Community Member',
       role: 'Health',
-      avatar: 'https://images.unsplash.com/photo-1634090217673-aaa14784727f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3b21hbiUyMGNvbW11bml0eSUyMG1lbWJlcnxlbnwxfHx8fDE3NzQzNzY1NDh8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1634090217673-aaa14784727f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3b21hbiUyMGNvbW11bml0eSUyMG1lbWJlcnxlbnwxfHx8fDE3NzQzNzY1NDh8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       emoji: '🌾',
@@ -62,7 +66,8 @@ export default function Testimonials() {
       text: 'People are more aware and active in improving the village.',
       author: 'Local Resident',
       role: 'Rural Development',
-      avatar: 'https://images.unsplash.com/photo-1656070487177-8e19a04cf426?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBydXJhbCUyMHZpbGxhZ2UlMjByZXNpZGVudCUyMGVsZGVyfGVufDF8fHx8MTc3NDM3NjU0OHww&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1656070487177-8e19a04cf426?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBydXJhbCUyMHZpbGxhZ2UlMjByZXNpZGVudCUyMGVsZGVyfGVufDF8fHx8MTc3NDM3NjU0OHww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       emoji: '🤝',
@@ -70,30 +75,32 @@ export default function Testimonials() {
       text: 'Working with the NGO helped me grow personally and contribute to society.',
       author: 'Volunteer',
       role: 'Volunteer',
-      avatar: 'https://images.unsplash.com/photo-1758599668209-783bd3691ec8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXIlMjB5b3VuZyUyMHBlcnNvbiUyMHNtaWxpbmd8ZW58MXx8fHwxNzc0Mzc2NTUyfDA&ixlib=rb-4.1.0&q=80&w=1080'
-    }
+      avatar:
+        'https://images.unsplash.com/photo-1758599668209-783bd3691ec8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXIlMjB5b3VuZyUyMHBlcnNvbiUyMHNtaWxpbmd8ZW58MXx8fHwxNzc0Mzc2NTUyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    },
   ];
 
   const shortStories = [
     {
       emoji: '🎓',
       title: 'Journey of Growth',
-      description: 'A student who once struggled with communication is now actively participating in school activities and mentoring others.'
+      description:
+        'A student who once struggled with communication is now actively participating in school activities and mentoring others.',
     },
     {
       emoji: '👩‍💼',
       title: 'Financial Independence',
-      description: 'A woman who had no income source is now earning through handmade bag production and supporting her family.'
-    }
+      description:
+        'A woman who had no income source is now earning through handmade bag production and supporting her family.',
+    },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1 bg-white dark:bg-[#0D1F1C]">
         <div className="max-w-[1100px] mx-auto px-6 py-8">
-          
           {/* Header Section - Compact with Action Links */}
           <div className="mb-7">
             <h1 className="text-2xl font-semibold text-[#111827] dark:text-white mb-2">
@@ -148,9 +155,7 @@ export default function Testimonials() {
                   </p>
 
                   {/* Description */}
-                  <p className="text-xs text-[#6B7280] dark:text-[#9CA3AF]">
-                    {video.description}
-                  </p>
+                  <p className="text-xs text-[#6B7280] dark:text-[#9CA3AF]">{video.description}</p>
                 </div>
               ))}
             </div>
@@ -237,7 +242,16 @@ export default function Testimonials() {
           {/* Trust Indicators - Inline Strip */}
           <div className="mb-7 p-4 bg-[#F9FAFB] dark:bg-[#112F2B] rounded-xl border border-[#E5E7EB] dark:border-[#1F4D47]">
             <p className="text-sm text-center text-[#6B7280] dark:text-[#9CA3AF]">
-              Trusted by <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">1200+ students</span> • <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">60+ volunteers</span> • <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">12+ villages</span>
+              Trusted by{' '}
+              <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">
+                1200+ students
+              </span>{' '}
+              •{' '}
+              <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">
+                60+ volunteers
+              </span>{' '}
+              •{' '}
+              <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">12+ villages</span>
             </p>
           </div>
 
@@ -245,12 +259,8 @@ export default function Testimonials() {
           <div className="mb-7 text-center">
             <div className="inline-flex items-center gap-2 p-4 bg-white dark:bg-[#112F2B] border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl">
               <div className="flex gap-0.5">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    size={18}
-                    className="fill-[#F4B400] text-[#F4B400]"
-                  />
+                {[1, 2, 3, 4, 5].map(star => (
+                  <Star key={star} size={18} className="fill-[#F4B400] text-[#F4B400]" />
                 ))}
               </div>
               <div className="text-left">
@@ -284,7 +294,6 @@ export default function Testimonials() {
               </a>
             </div>
           </div>
-
         </div>
       </main>
 

@@ -296,29 +296,12 @@ export function Header() {
                   {t('Overview')}
                 </a>
                 <div className="border-t border-[#E5E7EB] dark:border-[#1F4D47] my-2"></div>
-                <a
-                  href="/impact/numbers"
-                  className="block px-4 py-2.5 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:bg-[#F9FAFB] dark:hover:bg-[#1F4D47] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Numbers')}
-                </a>
+
                 <a
                   href="/success-stories"
                   className="block px-4 py-2.5 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:bg-[#F9FAFB] dark:hover:bg-[#1F4D47] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
                 >
                   {t('Success Stories')}
-                </a>
-                <a
-                  href="/impact/case-studies"
-                  className="block px-4 py-2.5 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:bg-[#F9FAFB] dark:hover:bg-[#1F4D47] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Case Studies')}
-                </a>
-                <a
-                  href="/before-after"
-                  className="block px-4 py-2.5 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:bg-[#F9FAFB] dark:hover:bg-[#1F4D47] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Before After')}
                 </a>
                 <a
                   href="/testimonials"
@@ -333,18 +316,18 @@ export function Header() {
                 >
                   {t('Annual Report')}
                 </a>
-                <a
+                {/* <a
                   href="/impact/program-outcomes"
                   className="block px-4 py-2.5 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:bg-[#F9FAFB] dark:hover:bg-[#1F4D47] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
                 >
                   {t('Outcomes')}
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="/impact/program-reports"
                   className="block px-4 py-2.5 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:bg-[#F9FAFB] dark:hover:bg-[#1F4D47] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
                 >
                   {t('Reports')}
-                </a>
+                </a> */}
               </div>
             )}
           </div>
@@ -867,32 +850,11 @@ export function Header() {
                   {t('Overview')}
                 </a>
                 <a
-                  href="/impact/numbers"
-                  onClick={closeMobileMenu}
-                  className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Numbers')}
-                </a>
-                <a
                   href="/success-stories"
                   onClick={closeMobileMenu}
                   className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
                 >
                   {t('Success Stories')}
-                </a>
-                <a
-                  href="/impact/case-studies"
-                  onClick={closeMobileMenu}
-                  className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Case Studies')}
-                </a>
-                <a
-                  href="/before-after"
-                  onClick={closeMobileMenu}
-                  className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Before After')}
                 </a>
                 <a
                   href="/testimonials"
@@ -907,20 +869,6 @@ export function Header() {
                   className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
                 >
                   {t('Annual Report')}
-                </a>
-                <a
-                  href="/impact/program-outcomes"
-                  onClick={closeMobileMenu}
-                  className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Outcomes')}
-                </a>
-                <a
-                  href="/impact/program-reports"
-                  onClick={closeMobileMenu}
-                  className="block py-2 text-[13px] text-[#6B7280] dark:text-[#9CA3AF] hover:text-[#1E7A6E] dark:hover:text-[#4FD1C5] transition-colors"
-                >
-                  {t('Reports')}
                 </a>
               </div>
             </div>

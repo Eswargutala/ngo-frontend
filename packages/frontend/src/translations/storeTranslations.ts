@@ -12,7 +12,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Boutique',
     de: 'Shop',
     pt: 'Loja',
-    zh: '购物'
+    zh: '购物',
   },
   'store.nav.categories': {
     en: 'Categories',
@@ -21,7 +21,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Catégories',
     de: 'Kategorien',
     pt: 'Categorias',
-    zh: '分类'
+    zh: '分类',
   },
   'store.nav.artisans': {
     en: 'Artisans',
@@ -30,7 +30,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Artisanes',
     de: 'Handwerker',
     pt: 'Artesãs',
-    zh: '工匠'
+    zh: '工匠',
   },
   'store.nav.impact': {
     en: 'Impact',
@@ -39,7 +39,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Impact',
     de: 'Wirkung',
     pt: 'Impacto',
-    zh: '影响'
+    zh: '影响',
   },
   'store.nav.cart': {
     en: 'Cart',
@@ -48,7 +48,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Panier',
     de: 'Warenkorb',
     pt: 'Carrinho',
-    zh: '购物车'
+    zh: '购物车',
   },
 
   // Hero
@@ -59,16 +59,16 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Artisanal • Éthique • Dirigé par des Femmes',
     de: 'Handgefertigt • Ethisch • Von Frauen Geführt',
     pt: 'Artesanal • Ético • Liderado por Mulheres',
-    zh: '手工 • 道德 • 女性主导'
+    zh: '手工 • 道德 • 女性主导',
   },
   'store.hero.heading': {
     en: 'Crafted by Hands. Powered by Hope.',
     hi: 'हाथों से शिल्पित। आशा से संचालित।',
     es: 'Elaborado a Mano. Impulsado por Esperanza.',
-    fr: 'Fabriqué à la Main. Alimenté par l\'Espoir.',
+    fr: "Fabriqué à la Main. Alimenté par l'Espoir.",
     de: 'Von Hand Gefertigt. Durch Hoffnung Angetrieben.',
     pt: 'Feito à Mão. Movido pela Esperança.',
-    zh: '手工制作。希望驱动。'
+    zh: '手工制作。希望驱动。',
   },
   'store.hero.subtext': {
     en: 'Handmade bags and essentials created by women artisans. Every purchase supports livelihoods and dignity.',
@@ -77,7 +77,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Sacs artisanaux et produits essentiels créés par des artisanes. Chaque achat soutient les moyens de subsistance et la dignité.',
     de: 'Handgefertigte Taschen und Essentials von Handwerkerinnen. Jeder Kauf unterstützt Lebensunterhalt und Würde.',
     pt: 'Bolsas artesanais e essenciais criadas por artesãs. Cada compra apoia meios de subsistência e dignidade.',
-    zh: '女工匠制作的手工包和必需品。每次购买都支持生计和尊严。'
+    zh: '女工匠制作的手工包和必需品。每次购买都支持生计和尊严。',
   },
   'store.hero.cta': {
     en: 'Shop Handmade Products',
@@ -86,7 +86,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Acheter des Produits Artisanaux',
     de: 'Handgefertigte Produkte Kaufen',
     pt: 'Comprar Produtos Artesanais',
-    zh: '购买手工产品'
+    zh: '购买手工产品',
   },
   'store.hero.secondary': {
     en: 'Learn about our artisans',
@@ -95,7 +95,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'En savoir plus sur nos artisanes',
     de: 'Erfahren Sie mehr über unsere Handwerker',
     pt: 'Conheça nossas artesãs',
-    zh: '了解我们的工匠'
+    zh: '了解我们的工匠',
   },
 
   // Why Buy
@@ -106,7 +106,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Fabriqué à la Main avec Soin',
     de: 'Handgefertigt mit Sorgfalt',
     pt: 'Feito à Mão com Cuidado',
-    zh: '用心手工制作'
+    zh: '用心手工制作',
   },
   'store.why.desc1': {
     en: 'Each product is crafted, not mass-produced.',
@@ -115,7 +115,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Chaque produit est fabriqué, non produit en série.',
     de: 'Jedes Produkt wird gefertigt, nicht massenweise hergestellt.',
     pt: 'Cada produto é feito, não produzido em massa.',
-    zh: '每件产品都是手工制作，而非批量生产。'
+    zh: '每件产品都是手工制作，而非批量生产。',
   },
   'store.why.title2': {
     en: 'Women-Led Livelihoods',
@@ -124,7 +124,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Moyens de Subsistance Dirigés par des Femmes',
     de: 'Von Frauen Geführter Lebensunterhalt',
     pt: 'Meios de Subsistência Liderados por Mulheres',
-    zh: '女性主导的生计'
+    zh: '女性主导的生计',
   },
   'store.why.desc2': {
     en: 'Your purchase supports women artisans directly.',
@@ -133,7 +133,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Votre achat soutient directement les artisanes.',
     de: 'Ihr Kauf unterstützt direkt Handwerkerinnen.',
     pt: 'Sua compra apoia diretamente as artesãs.',
-    zh: '您的购买直接支持女工匠。'
+    zh: '您的购买直接支持女工匠。',
   },
   'store.why.title3': {
     en: 'Affordable & Ethical',
@@ -142,7 +142,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Abordable et Éthique',
     de: 'Erschwinglich und Ethisch',
     pt: 'Acessível e Ético',
-    zh: '实惠且道德'
+    zh: '实惠且道德',
   },
   'store.why.desc3': {
     en: 'Fair pricing without compromising values.',
@@ -151,7 +151,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Prix équitables sans compromettre les valeurs.',
     de: 'Faire Preise ohne Werte zu kompromittieren.',
     pt: 'Preços justos sem comprometer valores.',
-    zh: '公平定价，不妥协价值观。'
+    zh: '公平定价，不妥协价值观。',
   },
 
   // Featured Products
@@ -162,7 +162,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Produits Artisanaux en Vedette',
     de: 'Ausgewählte Handgefertigte Produkte',
     pt: 'Produtos Artesanais em Destaque',
-    zh: '精选手工产品'
+    zh: '精选手工产品',
   },
   'store.featured.viewAll': {
     en: 'View All Products',
@@ -171,7 +171,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Voir Tous les Produits',
     de: 'Alle Produkte Ansehen',
     pt: 'Ver Todos os Produtos',
-    zh: '查看所有产品'
+    zh: '查看所有产品',
   },
   'store.badge.handmade': {
     en: 'Handmade',
@@ -180,27 +180,27 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Artisanal',
     de: 'Handgefertigt',
     pt: 'Artesanal',
-    zh: '手工制作'
+    zh: '手工制作',
   },
 
   // Artisans
   'store.artisans.heading': {
-    en: 'Behind Every Product Is a Woman\'s Story',
+    en: "Behind Every Product Is a Woman's Story",
     hi: 'हर उत्पाद के पीछे एक महिला की कहानी है',
     es: 'Detrás de Cada Producto Hay una Historia de Mujer',
-    fr: 'Derrière Chaque Produit Se Trouve l\'Histoire d\'une Femme',
+    fr: "Derrière Chaque Produit Se Trouve l'Histoire d'une Femme",
     de: 'Hinter Jedem Produkt Steht die Geschichte einer Frau',
     pt: 'Por Trás de Cada Produto Está a História de uma Mulher',
-    zh: '每件产品背后都有一个女性的故事'
+    zh: '每件产品背后都有一个女性的故事',
   },
   'store.artisans.text': {
     en: 'Our products are made by women who are building skills, confidence, and independence through meaningful work.',
     hi: 'हमारे उत्पाद उन महिलाओं द्वारा बनाए जाते हैं जो सार्थक काम के माध्यम से कौशल, आत्मविश्वास और स्वतंत्रता का निर्माण कर रही हैं।',
     es: 'Nuestros productos están hechos por mujeres que están construyendo habilidades, confianza e independencia a través del trabajo significativo.',
-    fr: 'Nos produits sont fabriqués par des femmes qui développent des compétences, de la confiance et de l\'indépendance grâce à un travail significatif.',
+    fr: "Nos produits sont fabriqués par des femmes qui développent des compétences, de la confiance et de l'indépendance grâce à un travail significatif.",
     de: 'Unsere Produkte werden von Frauen hergestellt, die durch sinnvolle Arbeit Fähigkeiten, Selbstvertrauen und Unabhängigkeit aufbauen.',
     pt: 'Nossos produtos são feitos por mulheres que estão construindo habilidades, confiança e independência através de trabalho significativo.',
-    zh: '我们的产品由女性制作，她们通过有意义的工作建立技能、信心和独立性。'
+    zh: '我们的产品由女性制作，她们通过有意义的工作建立技能、信心和独立性。',
   },
   'store.artisans.cta': {
     en: 'Meet the Artisans',
@@ -209,7 +209,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Rencontrez les Artisanes',
     de: 'Treffen Sie die Handwerker',
     pt: 'Conheça as Artesãs',
-    zh: '认识工匠'
+    zh: '认识工匠',
   },
 
   // Impact
@@ -220,7 +220,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Comment Votre Achat Aide',
     de: 'Wie Ihr Kauf Hilft',
     pt: 'Como Sua Compra Ajuda',
-    zh: '您的购买如何帮助'
+    zh: '您的购买如何帮助',
   },
   'store.impact.step1.title': {
     en: 'You Buy',
@@ -229,7 +229,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Vous Achetez',
     de: 'Sie Kaufen',
     pt: 'Você Compra',
-    zh: '您购买'
+    zh: '您购买',
   },
   'store.impact.step1.desc': {
     en: 'A handmade product',
@@ -238,7 +238,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Un produit artisanal',
     de: 'Ein handgefertigtes Produkt',
     pt: 'Um produto artesanal',
-    zh: '一件手工产品'
+    zh: '一件手工产品',
   },
   'store.impact.step2.title': {
     en: 'Women Earn',
@@ -247,7 +247,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Les Femmes Gagnent',
     de: 'Frauen Verdienen',
     pt: 'Mulheres Ganham',
-    zh: '妇女赚钱'
+    zh: '妇女赚钱',
   },
   'store.impact.step2.desc': {
     en: 'Fair income for their work',
@@ -256,7 +256,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Un revenu équitable pour leur travail',
     de: 'Fairer Lohn für ihre Arbeit',
     pt: 'Renda justa por seu trabalho',
-    zh: '工作获得公平收入'
+    zh: '工作获得公平收入',
   },
   'store.impact.step3.title': {
     en: 'Skills Grow',
@@ -265,7 +265,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Les Compétences Grandissent',
     de: 'Fähigkeiten Wachsen',
     pt: 'Habilidades Crescem',
-    zh: '技能增长'
+    zh: '技能增长',
   },
   'store.impact.step3.desc': {
     en: 'Training & confidence',
@@ -274,16 +274,16 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Formation et confiance',
     de: 'Schulung und Selbstvertrauen',
     pt: 'Treinamento e confiança',
-    zh: '培训和信心'
+    zh: '培训和信心',
   },
   'store.impact.step4.title': {
     en: 'Communities Rise',
     hi: 'समुदाय उभरते हैं',
     es: 'Comunidades Surgen',
-    fr: 'Les Communautés S\'Élèvent',
+    fr: "Les Communautés S'Élèvent",
     de: 'Gemeinschaften Steigen',
     pt: 'Comunidades Se Elevam',
-    zh: '社区崛起'
+    zh: '社区崛起',
   },
   'store.impact.step4.desc': {
     en: 'Sustainable change',
@@ -292,7 +292,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Changement durable',
     de: 'Nachhaltige Veränderung',
     pt: 'Mudança sustentável',
-    zh: '可持续变革'
+    zh: '可持续变革',
   },
 
   // Categories
@@ -303,7 +303,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Acheter par Catégorie',
     de: 'Nach Kategorie Einkaufen',
     pt: 'Comprar por Categoria',
-    zh: '按类别购物'
+    zh: '按类别购物',
   },
   'store.category.bags': {
     en: 'Handmade Bags',
@@ -312,16 +312,16 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Sacs Artisanaux',
     de: 'Handgefertigte Taschen',
     pt: 'Bolsas Artesanais',
-    zh: '手工包'
+    zh: '手工包',
   },
   'store.category.accessories': {
     en: 'Daily-Use Accessories',
     hi: 'दैनिक उपयोग की एक्सेसरीज',
     es: 'Accesorios de Uso Diario',
-    fr: 'Accessoires d\'Usage Quotidien',
+    fr: "Accessoires d'Usage Quotidien",
     de: 'Accessoires für den Täglichen Gebrauch',
     pt: 'Acessórios de Uso Diário',
-    zh: '日常用品'
+    zh: '日常用品',
   },
   'store.category.eco': {
     en: 'Eco-Friendly Products',
@@ -330,7 +330,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Produits Écologiques',
     de: 'Umweltfreundliche Produkte',
     pt: 'Produtos Ecológicos',
-    zh: '环保产品'
+    zh: '环保产品',
   },
 
   // Trust Strip
@@ -341,16 +341,16 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Produits Artisanaux',
     de: 'Handgefertigte Produkte',
     pt: 'Produtos Artesanais',
-    zh: '手工产品'
+    zh: '手工产品',
   },
   'store.trust.empowerment': {
     en: 'Women Empowerment Initiative',
     hi: 'महिला सशक्तिकरण पहल',
     es: 'Iniciativa de Empoderamiento de Mujeres',
-    fr: 'Initiative d\'Autonomisation des Femmes',
+    fr: "Initiative d'Autonomisation des Femmes",
     de: 'Initiative zur Stärkung von Frauen',
     pt: 'Iniciativa de Empoderamento Feminino',
-    zh: '妇女赋权倡议'
+    zh: '妇女赋权倡议',
   },
   'store.trust.ethical': {
     en: 'Ethical Production',
@@ -359,7 +359,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Production Éthique',
     de: 'Ethische Produktion',
     pt: 'Produção Ética',
-    zh: '道德生产'
+    zh: '道德生产',
   },
   'store.trust.linked': {
     en: 'Linked to Lakhil Raj Welfare Foundation',
@@ -368,7 +368,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Lié à Lakhil Raj Welfare Foundation',
     de: 'Verbunden mit Lakhil Raj Welfare Foundation',
     pt: 'Vinculado à Lakhil Raj Welfare Foundation',
-    zh: '与Lakhil Raj Welfare Foundation相关联'
+    zh: '与Lakhil Raj Welfare Foundation相关联',
   },
   'store.trust.note': {
     en: 'This store supports programs run by Lakhil Raj Welfare Foundation.',
@@ -377,7 +377,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Ce magasin soutient les programmes gérés par Lakhil Raj Welfare Foundation.',
     de: 'Dieser Shop unterstützt Programme der Lakhil Raj Welfare Foundation.',
     pt: 'Esta loja apoia programas administrados pela Lakhil Raj Welfare Foundation.',
-    zh: '此商店支持Lakhil Raj Welfare Foundation运营的项目。'
+    zh: '此商店支持Lakhil Raj Welfare Foundation运营的项目。',
   },
 
   // Soft CTA
@@ -388,7 +388,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Achetez avec un but. Soutenez le vrai changement.',
     de: 'Mit Zweck Einkaufen. Echten Wandel Unterstützen.',
     pt: 'Compre com propósito. Apoie mudanças reais.',
-    zh: '有目的地购物。支持真正的变革。'
+    zh: '有目的地购物。支持真正的变革。',
   },
   'store.cta.button': {
     en: 'Explore the Store',
@@ -397,7 +397,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Explorer le Magasin',
     de: 'Shop Erkunden',
     pt: 'Explorar a Loja',
-    zh: '探索商店'
+    zh: '探索商店',
   },
 
   // Footer
@@ -408,7 +408,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Boutique',
     de: 'Shop',
     pt: 'Loja',
-    zh: '购物'
+    zh: '购物',
   },
   'store.footer.allProducts': {
     en: 'All Products',
@@ -417,7 +417,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Tous les Produits',
     de: 'Alle Produkte',
     pt: 'Todos os Produtos',
-    zh: '所有产品'
+    zh: '所有产品',
   },
   'store.footer.about': {
     en: 'About',
@@ -426,7 +426,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'À Propos',
     de: 'Über',
     pt: 'Sobre',
-    zh: '关于'
+    zh: '关于',
   },
   'store.footer.ourStory': {
     en: 'Our Story',
@@ -435,7 +435,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Notre Histoire',
     de: 'Unsere Geschichte',
     pt: 'Nossa História',
-    zh: '我们的故事'
+    zh: '我们的故事',
   },
   'store.footer.meetArtisans': {
     en: 'Meet the Artisans',
@@ -444,7 +444,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Rencontrez les Artisanes',
     de: 'Treffen Sie die Handwerker',
     pt: 'Conheça as Artesãs',
-    zh: '认识工匠'
+    zh: '认识工匠',
   },
   'store.footer.ourImpact': {
     en: 'Our Impact',
@@ -453,7 +453,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Notre Impact',
     de: 'Unsere Wirkung',
     pt: 'Nosso Impacto',
-    zh: '我们的影响'
+    zh: '我们的影响',
   },
   'store.footer.support': {
     en: 'Support',
@@ -462,7 +462,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Assistance',
     de: 'Unterstützung',
     pt: 'Suporte',
-    zh: '支持'
+    zh: '支持',
   },
   'store.footer.faqs': {
     en: 'FAQs',
@@ -471,7 +471,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'FAQ',
     de: 'Häufige Fragen',
     pt: 'Perguntas Frequentes',
-    zh: '常见问题'
+    zh: '常见问题',
   },
   'store.footer.shipping': {
     en: 'Shipping & Returns',
@@ -480,7 +480,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Livraison et Retours',
     de: 'Versand und Rücksendungen',
     pt: 'Envio e Devoluções',
-    zh: '运输与退货'
+    zh: '运输与退货',
   },
   'store.footer.contact': {
     en: 'Contact Us',
@@ -489,7 +489,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Contactez-nous',
     de: 'Kontaktieren Sie uns',
     pt: 'Entre em Contato',
-    zh: '联系我们'
+    zh: '联系我们',
   },
   'store.footer.trust': {
     en: 'Trust',
@@ -498,7 +498,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Confiance',
     de: 'Vertrauen',
     pt: 'Confiança',
-    zh: '信任'
+    zh: '信任',
   },
   'store.footer.linkedNGO': {
     en: 'Linked NGO',
@@ -507,7 +507,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'ONG Liée',
     de: 'Verbundene NGO',
     pt: 'ONG Vinculada',
-    zh: '关联NGO'
+    zh: '关联NGO',
   },
   'store.footer.policies': {
     en: 'Policies',
@@ -516,7 +516,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Politiques',
     de: 'Richtlinien',
     pt: 'Políticas',
-    zh: '政策'
+    zh: '政策',
   },
   'store.footer.copyright': {
     en: '© Lakhil Raj Welfare Foundation – Handmade Store',
@@ -525,7 +525,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: '© Lakhil Raj Welfare Foundation – Boutique Artisanale',
     de: '© Lakhil Raj Welfare Foundation – Handgefertigter Shop',
     pt: '© Lakhil Raj Welfare Foundation – Loja Artesanal',
-    zh: '© Lakhil Raj Welfare Foundation – 手工商店'
+    zh: '© Lakhil Raj Welfare Foundation – 手工商店',
   },
 
   // Product Details
@@ -536,7 +536,7 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Ajouter au Panier',
     de: 'In den Warenkorb',
     pt: 'Adicionar ao Carrinho',
-    zh: '添加到购物车'
+    zh: '添加到购物车',
   },
   'store.product.viewDetails': {
     en: 'View Details',
@@ -545,6 +545,6 @@ export const storeTranslations: Record<string, Record<Language, string>> = {
     fr: 'Voir les Détails',
     de: 'Details Anzeigen',
     pt: 'Ver Detalhes',
-    zh: '查看详情'
-  }
+    zh: '查看详情',
+  },
 };
