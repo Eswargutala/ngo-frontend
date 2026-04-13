@@ -2,6 +2,7 @@
 import { useThemeLanguage } from '../contexts/ThemeLanguageContext';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { TrendingUp, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export default function ImpactOverview() {
