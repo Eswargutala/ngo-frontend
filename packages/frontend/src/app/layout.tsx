@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Providers } from './providers';
-import '../styles/globals.css';
+import IntroLoader from '@/components/IntroLoader';
+import '../styles/globals.css'; // keep this if your css is in src/styles
 
 export const metadata: Metadata = {
   title: 'Lakhil Raj Welfare Foundation',
@@ -11,7 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <IntroLoader>{children}</IntroLoader>
+        </Providers>
       </body>
     </html>
   );
