@@ -7,11 +7,20 @@ export default function IntroLoader({ children }: { children: React.ReactNode })
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
+    const hasSeenLoader = sessionStorage.getItem('seenLoader');
+
+    // If already seen → skip loader
+    if (hasSeenLoader) {
+      setLoading(false);
+      return;
+    }
+
     const fadeTimer = setTimeout(() => {
       setFadeOut(true);
     }, 2200);
 
     const endTimer = setTimeout(() => {
+      sessionStorage.setItem('seenLoader', 'true');
       setLoading(false);
     }, 3000);
 
@@ -40,7 +49,7 @@ export default function IntroLoader({ children }: { children: React.ReactNode })
       }}
     >
       <img
-        src="/images/logo1.png"
+        src="/images/Logo.png"
         alt="logo"
         style={{
           width: '200px',
