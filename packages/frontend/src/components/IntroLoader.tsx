@@ -49,10 +49,10 @@ export default function IntroLoader({ children }: { children: React.ReactNode })
       }}
     >
       <img
-        src="/images/lgo1.png"
+        src="/images/logo1.png"
         alt="logo"
         style={{
-          width: '200px',
+          width: '350px',
           animation: 'zoomIn 2.5s ease forwards',
         }}
       />
