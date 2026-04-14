@@ -3,7 +3,21 @@ import { useState } from 'react';
 import { useThemeLanguage } from '../contexts/ThemeLanguageContext';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { Heart, TrendingUp, Award, Users, Globe, Code, Megaphone, Palette, GraduationCap, ChevronDown, Send, ArrowRight, Rocket } from 'lucide-react';
+import {
+  Heart,
+  TrendingUp,
+  Award,
+  Users,
+  Globe,
+  Code,
+  Megaphone,
+  Palette,
+  GraduationCap,
+  ChevronDown,
+  Send,
+  ArrowRight,
+  Rocket,
+} from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 import axios from 'axios';
@@ -19,35 +33,37 @@ export default function VolunteerWithUs() {
     city: '',
     areaOfInterest: '',
     why: '',
-    availability: ''
+    availability: '',
   });
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-        await axios.post(`${BASE_URL}/forms/volunteer`, formData);
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Failed to submit application. Please try again.');
-        setIsSubmitting(false);
-        return;
-      }
-    
+      await axios.post(`${BASE_URL}/forms/volunteer`, formData);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit application. Please try again.');
+      setIsSubmitting(false);
+      return;
+    }
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
+
     // Reset form
     setFormData({
       fullName: '',
@@ -56,7 +72,7 @@ export default function VolunteerWithUs() {
       city: '',
       areaOfInterest: '',
       why: '',
-      availability: ''
+      availability: '',
     });
 
     // Hide success message after 5 seconds
@@ -79,7 +95,7 @@ export default function VolunteerWithUs() {
     { icon: Users, text: 'Team collaboration' },
     { icon: Award, text: 'Certificate & recognition' },
     { icon: Heart, text: 'Social impact' },
-    { icon: Rocket, text: 'Leadership opportunities' }
+    { icon: Rocket, text: 'Leadership opportunities' },
   ];
 
   const volunteerRoles = [
@@ -87,81 +103,77 @@ export default function VolunteerWithUs() {
       icon: GraduationCap,
       emoji: '🎓',
       title: 'Teaching & Mentorship',
-      tasks: ['Teach English / digital skills', 'Guide students']
+      tasks: ['Teach English / digital skills', 'Guide students'],
     },
     {
       icon: Code,
       emoji: '💻',
       title: 'Technical Team',
-      tasks: ['Web development', 'UI/UX design', 'App support']
+      tasks: ['Web development', 'UI/UX design', 'App support'],
     },
     {
       icon: Megaphone,
       emoji: '📢',
       title: 'Outreach Team',
-      tasks: ['Conduct awareness sessions', 'Organize events']
+      tasks: ['Conduct awareness sessions', 'Organize events'],
     },
     {
       icon: Palette,
       emoji: '🎨',
       title: 'Creative Team',
-      tasks: ['Social media content', 'Posters & campaigns']
-    }
+      tasks: ['Social media content', 'Posters & campaigns'],
+    },
   ];
 
   const processSteps = [
     { number: '1', title: 'Apply', description: 'Fill the form below' },
     { number: '2', title: 'Short Interaction', description: 'Quick review call' },
     { number: '3', title: 'Onboarding', description: 'Join the team' },
-    { number: '4', title: 'Start Working', description: 'Create impact' }
+    { number: '4', title: 'Start Working', description: 'Create impact' },
   ];
 
   const expectations = [
     'Minimum weekly contribution',
     'Active participation',
-    'Responsibility towards tasks'
+    'Responsibility towards tasks',
   ];
 
-  const benefits = [
-    'Learning experience',
-    'Certificate',
-    'Real project exposure'
-  ];
+  const benefits = ['Learning experience', 'Certificate', 'Real project exposure'];
 
   const testimonials = [
     {
       quote: 'A meaningful experience.',
-      description: 'Working here helped me grow and contribute.',
-      author: 'Volunteer'
+      description:
+        'This experience taught me teamwork, responsibility, and the joy of helping others.',
+      author: 'Volunteer',
     },
     {
       quote: 'I learned more than I expected.',
-      description: 'Great exposure and teamwork.',
-      author: 'Student Volunteer'
-    }
+      description: 'It was more than volunteering—it was life-changing.',
+      author: 'Student Volunteer',
+    },
   ];
 
   const activityImages = [
-    'https://images.unsplash.com/photo-1758599667729-a6f0f8bd213b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXJzJTIwaGVscGluZyUyMGNvbW11bml0eSUyMGdyb3VwJTIwd29ya3xlbnwxfHx8fDE3NzQzNzc5NDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1759738102266-bab1d130b557?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXJzJTIwd29ya2luZyUyMHRvZ2V0aGVyJTIwdGVhbXdvcmslMjBpbmRpYXxlbnwxfHx8fDE3NzQzNzc5NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1758599668429-121d54188b9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBzZXJ2aWNlJTIwdm9sdW50ZWVycyUyMGFjdGlvbiUyMGhlbHBpbmd8ZW58MXx8fHwxNzc0Mzc3OTQzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1623287073837-5b07d79739a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXIlMjB0ZWFjaGluZyUyMHN0dWRlbnRzJTIwZWR1Y2F0aW9uJTIwaGVscHxlbnwxfHx8fDE3NzQzNzc5NDN8MA&ixlib=rb-4.1.0&q=80&w=1080'
+    '/images/voulenteer1.jpeg',
+    '/images/voulenteer2.jpeg',
+    '/images/voulenteer3.jpeg',
+    '/images/voulenteer4.jpeg',
   ];
 
   const faqs = [
-    { question: 'Is it paid?', answer: 'No, it\'s volunteer-based' },
+    { question: 'Is it paid?', answer: "No, it's volunteer-based" },
     { question: 'Will I get a certificate?', answer: 'Yes' },
     { question: 'Can beginners join?', answer: 'Yes' },
-    { question: 'Online or offline?', answer: 'Both' }
+    { question: 'Online or offline?', answer: 'Both' },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1 bg-white dark:bg-[#0D1F1C]">
         <div className="max-w-[1100px] mx-auto px-6 py-8">
-          
           {/* Hero Section - Expanded but Tight */}
           <div className="mb-8 grid md:grid-cols-2 gap-6 items-center">
             <div>
@@ -169,7 +181,8 @@ export default function VolunteerWithUs() {
                 Be the Change. Start with Yourself.
               </h1>
               <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4">
-                Join our mission to empower students, support communities, and create real impact through meaningful work.
+                Join our mission to empower students, support communities, and create real impact
+                through meaningful work.
               </p>
               <div className="flex flex-wrap gap-3">
                 <button
@@ -188,7 +201,7 @@ export default function VolunteerWithUs() {
             </div>
             <div className="rounded-xl overflow-hidden border border-[#E5E7EB] dark:border-[#1F4D47] h-64">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1760992003987-efc5259bcfbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdm9sdW50ZWVycyUyMGhlbHBpbmclMjBjb21tdW5pdHl8ZW58MXx8fHwxNzc0MzA2NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/images/voulenteer.jpeg"
                 alt="Community volunteers"
                 className="w-full h-full object-cover"
               />
@@ -206,7 +219,10 @@ export default function VolunteerWithUs() {
                   key={index}
                   className="flex items-center gap-2.5 p-3 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-lg bg-white dark:bg-[#112F2B] hover:shadow-md transition-all duration-300"
                 >
-                  <item.icon size={18} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0" />
+                  <item.icon
+                    size={18}
+                    className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0"
+                  />
                   <span className="text-sm text-[#111827] dark:text-white">{item.text}</span>
                 </div>
               ))}
@@ -232,7 +248,10 @@ export default function VolunteerWithUs() {
                   </div>
                   <ul className="space-y-1.5">
                     {role.tasks.map((task, idx) => (
-                      <li key={idx} className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
+                      <li
+                        key={idx}
+                        className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                      >
                         <span className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2">•</span>
                         {task}
                       </li>
@@ -255,14 +274,14 @@ export default function VolunteerWithUs() {
                   className="relative text-center p-4 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl bg-[#F9FAFB] dark:bg-[#112F2B]"
                 >
                   <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-[#1E7A6E] dark:bg-[#4FD1C5] flex items-center justify-center">
-                    <span className="text-base font-bold text-white dark:text-[#0D1F1C]">{step.number}</span>
+                    <span className="text-base font-bold text-white dark:text-[#0D1F1C]">
+                      {step.number}
+                    </span>
                   </div>
                   <h3 className="text-sm font-semibold text-[#111827] dark:text-white mb-1">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-[#6B7280] dark:text-[#9CA3AF]">
-                    {step.description}
-                  </p>
+                  <p className="text-xs text-[#6B7280] dark:text-[#9CA3AF]">{step.description}</p>
                   {index < processSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-1.5 w-3 h-0.5 bg-[#1E7A6E] dark:bg-[#4FD1C5]"></div>
                   )}
@@ -284,8 +303,14 @@ export default function VolunteerWithUs() {
                 </h3>
                 <ul className="space-y-2">
                   {expectations.map((item, index) => (
-                    <li key={index} className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
-                      <ArrowRight size={16} className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0" />
+                    <li
+                      key={index}
+                      className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                    >
+                      <ArrowRight
+                        size={16}
+                        className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0"
+                      />
                       {item}
                     </li>
                   ))}
@@ -299,7 +324,10 @@ export default function VolunteerWithUs() {
                 </h3>
                 <ul className="space-y-2">
                   {benefits.map((item, index) => (
-                    <li key={index} className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
+                    <li
+                      key={index}
+                      className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                    >
                       <ArrowRight size={16} className="text-[#F4B400] mr-2 mt-0.5 flex-shrink-0" />
                       {item}
                     </li>
@@ -315,13 +343,25 @@ export default function VolunteerWithUs() {
               📊 Volunteer Impact
             </h2>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-[#6B7280] dark:text-[#9CA3AF]">
-              <span><span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">🤝 60+</span> Volunteers</span>
+              <span>
+                <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">🤝 60+</span>{' '}
+                Volunteers
+              </span>
               <span className="hidden sm:inline">•</span>
-              <span><span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">🎓 1200+</span> Students Impacted</span>
+              <span>
+                <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">🎓 1200+</span>{' '}
+                Students Impacted
+              </span>
               <span className="hidden sm:inline">•</span>
-              <span><span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">🌍 12+</span> Villages</span>
+              <span>
+                <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">🌍 12+</span>{' '}
+                Villages
+              </span>
               <span className="hidden sm:inline">•</span>
-              <span><span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">📚 150+</span> Sessions</span>
+              <span>
+                <span className="font-semibold text-[#1E7A6E] dark:text-[#4FD1C5]">📚 150+</span>{' '}
+                Sessions
+              </span>
             </div>
           </div>
 
@@ -527,9 +567,7 @@ export default function VolunteerWithUs() {
 
           {/* FAQs - Compact */}
           <div className="mb-8">
-            <h2 className="text-lg font-semibold text-[#111827] dark:text-white mb-4">
-              ❓ FAQs
-            </h2>
+            <h2 className="text-lg font-semibold text-[#111827] dark:text-white mb-4">❓ FAQs</h2>
             <div className="grid sm:grid-cols-2 gap-3">
               {faqs.map((faq, index) => (
                 <div
@@ -556,9 +594,7 @@ export default function VolunteerWithUs() {
                     }`}
                   >
                     <div className="px-4 pb-3">
-                      <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">
-                        {faq.answer}
-                      </p>
+                      <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -589,7 +625,6 @@ export default function VolunteerWithUs() {
               </a>
             </div>
           </div>
-
         </div>
       </main>
 
