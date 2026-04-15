@@ -178,11 +178,11 @@ export default function VolunteerWithUs() {
           <div className="mb-8 grid md:grid-cols-2 gap-6 items-center">
             <div>
               <h1 className="text-3xl font-semibold text-[#111827] dark:text-white mb-3">
-                Be the Change. Start with Yourself.
+                Empower Lives. Create Impact.
               </h1>
               <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF] mb-4">
-                Join our mission to empower students, support communities, and create real impact
-                through meaningful work.
+                Volunteering with us is more than just contributing your time — it's about learning,
+                growing, and becoming part of something bigger.
               </p>
               <div className="flex flex-wrap gap-3">
                 <button

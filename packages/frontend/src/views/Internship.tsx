@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 import axios from 'axios';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 const BASE_URL = API_URL.endsWith('/api/v1') ? API_URL : `${API_URL}/api/v1`;
-import { 
+import {
   Award,
   Users,
   TrendingUp,
@@ -26,7 +26,7 @@ import {
   Target,
   Briefcase,
   BarChart3,
-  Star
+  Star,
 } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
@@ -40,35 +40,37 @@ export default function Internship() {
     courseYear: '',
     areaOfInterest: '',
     why: '',
-    experience: ''
+    experience: '',
   });
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-        await axios.post(`${BASE_URL}/forms/internship`, formData);
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Failed to submit application. Please try again.');
-        setIsSubmitting(false);
-        return;
-      }
-    
+      await axios.post(`${BASE_URL}/forms/internship`, formData);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit application. Please try again.');
+      setIsSubmitting(false);
+      return;
+    }
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
+
     // Reset form
     setFormData({
       fullName: '',
@@ -78,7 +80,7 @@ export default function Internship() {
       courseYear: '',
       areaOfInterest: '',
       why: '',
-      experience: ''
+      experience: '',
     });
 
     // Hide success message after 5 seconds
@@ -101,7 +103,7 @@ export default function Internship() {
     { icon: Users, text: 'Team collaboration' },
     { icon: TrendingUp, text: 'Skill development' },
     { icon: Globe, text: 'Social impact' },
-    { icon: Brain, text: 'Hands-on learning' }
+    { icon: Brain, text: 'Hands-on learning' },
   ];
 
   const internshipRoles = [
@@ -109,26 +111,26 @@ export default function Internship() {
       icon: Code,
       emoji: '💻',
       title: 'Web Development',
-      tasks: ['Build website features', 'Work on real projects']
+      tasks: ['Build website features', 'Work on real projects'],
     },
     {
       icon: Palette,
       emoji: '🎨',
       title: 'UI/UX Design',
-      tasks: ['Design pages and flows', 'Improve user experience']
+      tasks: ['Design pages and flows', 'Improve user experience'],
     },
     {
       icon: Megaphone,
       emoji: '📢',
       title: 'Marketing & Outreach',
-      tasks: ['Social media', 'Awareness campaigns']
+      tasks: ['Social media', 'Awareness campaigns'],
     },
     {
       icon: FileText,
       emoji: '📊',
       title: 'Research & Content',
-      tasks: ['Create content', 'Analyze programs']
-    }
+      tasks: ['Create content', 'Analyze programs'],
+    },
   ];
 
   const internshipSteps = [
@@ -136,7 +138,7 @@ export default function Internship() {
     { number: '2', title: 'Selection', description: 'Review process' },
     { number: '3', title: 'Onboarding', description: 'Join the team' },
     { number: '4', title: 'Work on Tasks', description: 'Real projects' },
-    { number: '5', title: 'Evaluation & Certificate', description: 'Get recognized' }
+    { number: '5', title: 'Evaluation & Certificate', description: 'Get recognized' },
   ];
 
   const whatYouGain = [
@@ -144,49 +146,48 @@ export default function Internship() {
     'Portfolio building',
     'Team collaboration skills',
     'Leadership exposure',
-    'Certificate'
+    'Certificate',
   ];
 
   const impactStats = [
     { emoji: '👨‍💻', value: '100+', label: 'Interns' },
     { emoji: '📚', value: '50+', label: 'Projects' },
-    { emoji: '🌍', value: 'Real', label: 'Community Impact' }
+    { emoji: '🌍', value: 'Real', label: 'Community Impact' },
   ];
 
   const internImages = [
     'https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHdvcmtpbmclMjBsYXB0b3AlMjBjb21wdXRlciUyMGNvbGxlZ2UlMjBpbmRpYXxlbnwxfHx8fDE3NzQzODIxNTF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1631038506857-6c970dd9ba02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwaW50ZXJuc2hpcCUyMHRlYW0lMjBjb2xsYWJvcmF0aW9uJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3NDM4MjE1Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1572021335469-31706a17aaef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHBlb3BsZSUyMHdvcmtpbmclMjB0b2dldGhlciUyMG9mZmljZSUyMG1lZXRpbmd8ZW58MXx8fHwxNzc0MzgyMTUzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1758270705172-07b53627dfcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwc3R1ZGVudHMlMjBwcm9qZWN0JTIwdGVhbXdvcmslMjBsZWFybmluZ3xlbnwxfHx8fDE3NzQzODIxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080'
+    '/images/voulenteer5.jpeg',
+    '/images/voulenteer6.jpeg',
+    '/images/voulenteer7.jpg',
   ];
 
   const testimonials = [
     {
       quote: 'Great learning experience.',
-      description: 'I worked on real projects and improved my skills.',
-      author: 'Intern'
+      description: 'I learned by doing real work, not just theory.',
+      author: 'Intern',
     },
     {
       quote: 'Helped me build my portfolio.',
-      description: 'Amazing exposure and teamwork.',
-      author: 'Student'
-    }
+      description: 'It helped me build my skills and think more practically.',
+      author: 'Student',
+    },
   ];
 
   const faqs = [
-    { question: 'Is it paid?', answer: 'No, it\'s learning-based' },
+    { question: 'Is it paid?', answer: "No, it's learning-based" },
     { question: 'Will I get a certificate?', answer: 'Yes' },
     { question: 'Is it remote?', answer: 'Yes / Hybrid' },
-    { question: 'Can beginners apply?', answer: 'Yes' }
+    { question: 'Can beginners apply?', answer: 'Yes' },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1 bg-white dark:bg-[#0D1F1C]">
         <div className="max-w-[1280px] mx-auto px-6 py-12">
-          
           {/* Hero Section - Compact Split Layout */}
           <div className="mb-12 grid md:grid-cols-2 gap-10 items-center">
             <div>
@@ -194,7 +195,8 @@ export default function Internship() {
                 💼 Learn. Contribute. Grow.
               </h1>
               <p className="text-lg text-[#6B7280] dark:text-[#9CA3AF] mb-6">
-                Join our internship program to gain real-world experience, work on impactful projects, and develop essential skills.
+                Join our internship program and gain real-world experience, develop skills, and
+                create meaningful impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
@@ -213,7 +215,7 @@ export default function Internship() {
             </div>
             <div className="rounded-xl overflow-hidden border border-[#E5E7EB] dark:border-[#1F4D47] h-80">
               <ImageWithFallback
-                src={internImages[0]}
+                src="/images/voulenteer5.jpeg"
                 alt="Students working on internship"
                 className="w-full h-full object-cover"
               />
@@ -231,7 +233,10 @@ export default function Internship() {
                   key={index}
                   className="flex items-center gap-4 p-5 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-lg bg-white dark:bg-[#112F2B] hover:shadow-lg transition-all duration-300"
                 >
-                  <item.icon size={24} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0" />
+                  <item.icon
+                    size={24}
+                    className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0"
+                  />
                   <span className="text-base text-[#111827] dark:text-white">{item.text}</span>
                 </div>
               ))}
@@ -257,7 +262,10 @@ export default function Internship() {
                   </div>
                   <ul className="space-y-2">
                     {role.tasks.map((task, idx) => (
-                      <li key={idx} className="text-base text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
+                      <li
+                        key={idx}
+                        className="text-base text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                      >
                         <span className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2">•</span>
                         {task}
                       </li>
@@ -280,14 +288,14 @@ export default function Internship() {
                   className="relative text-center p-6 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl bg-[#F9FAFB] dark:bg-[#112F2B]"
                 >
                   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#1E7A6E] dark:bg-[#4FD1C5] flex items-center justify-center">
-                    <span className="text-xl font-bold text-white dark:text-[#0D1F1C]">{step.number}</span>
+                    <span className="text-xl font-bold text-white dark:text-[#0D1F1C]">
+                      {step.number}
+                    </span>
                   </div>
                   <h3 className="text-base font-semibold text-[#111827] dark:text-white mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">
-                    {step.description}
-                  </p>
+                  <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">{step.description}</p>
                   {index < internshipSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-2.5 w-5 h-0.5 bg-[#1E7A6E] dark:bg-[#4FD1C5]"></div>
                   )}
@@ -305,16 +313,21 @@ export default function Internship() {
               {/* Duration */}
               <div className="border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl p-6 bg-white dark:bg-[#112F2B]">
                 <h3 className="text-lg font-semibold text-[#111827] dark:text-white mb-4 flex items-center gap-2">
-                  <Clock size={20} className="text-[#1E7A6E] dark:text-[#4FD1C5]" />
-                  ⏳ Duration
+                  <Clock size={20} className="text-[#1E7A6E] dark:text-[#4FD1C5]" />⏳ Duration
                 </h3>
                 <ul className="space-y-3">
                   <li className="text-base text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
-                    <CheckCircle size={18} className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0" />
-                    4–8 weeks
+                    <CheckCircle
+                      size={18}
+                      className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0"
+                    />
+                    1–2 Months
                   </li>
                   <li className="text-base text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
-                    <CheckCircle size={18} className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      size={18}
+                      className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0"
+                    />
                     Flexible
                   </li>
                 </ul>
@@ -349,7 +362,10 @@ export default function Internship() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {whatYouGain.map((gain, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0 mt-0.5" />
+                    <CheckCircle
+                      size={20}
+                      className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0 mt-0.5"
+                    />
                     <span className="text-base text-[#111827] dark:text-white">{gain}</span>
                   </div>
                 ))}
@@ -369,9 +385,7 @@ export default function Internship() {
                   <div className="text-3xl font-bold text-[#1E7A6E] dark:text-[#4FD1C5] mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-base text-[#6B7280] dark:text-[#9CA3AF]">
-                    {stat.label}
-                  </div>
+                  <div className="text-base text-[#6B7280] dark:text-[#9CA3AF]">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -595,9 +609,7 @@ export default function Internship() {
 
           {/* FAQs */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-[#111827] dark:text-white mb-6">
-              ❓ FAQs
-            </h2>
+            <h2 className="text-2xl font-semibold text-[#111827] dark:text-white mb-6">❓ FAQs</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {faqs.map((faq, index) => (
                 <div
@@ -624,9 +636,7 @@ export default function Internship() {
                     }`}
                   >
                     <div className="px-6 pb-4">
-                      <p className="text-base text-[#6B7280] dark:text-[#9CA3AF]">
-                        {faq.answer}
-                      </p>
+                      <p className="text-base text-[#6B7280] dark:text-[#9CA3AF]">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -640,7 +650,8 @@ export default function Internship() {
               🚀 Start Your Learning Journey
             </h2>
             <p className="text-lg text-[#6B7280] dark:text-[#9CA3AF] mb-6 max-w-2xl mx-auto">
-              Join our internship program and gain hands-on experience while making a real difference.
+              Join our internship program and gain hands-on experience while making a real
+              difference.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button
@@ -657,7 +668,6 @@ export default function Internship() {
               </a>
             </div>
           </div>
-
         </div>
       </main>
 

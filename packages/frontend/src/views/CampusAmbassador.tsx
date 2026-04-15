@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 import axios from 'axios';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 const BASE_URL = API_URL.endsWith('/api/v1') ? API_URL : `${API_URL}/api/v1`;
-import { 
+import {
   Award,
   Users,
   TrendingUp,
@@ -24,7 +24,7 @@ import {
   Star,
   Trophy,
   FileText,
-  Network
+  Network,
 } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
@@ -39,35 +39,37 @@ export default function CampusAmbassador() {
     city: '',
     why: '',
     experience: '',
-    areaOfInterest: ''
+    areaOfInterest: '',
   });
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-        await axios.post(`${BASE_URL}/forms/campus-ambassador`, formData);
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Failed to submit application. Please try again.');
-        setIsSubmitting(false);
-        return;
-      }
-    
+      await axios.post(`${BASE_URL}/forms/campus-ambassador`, formData);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit application. Please try again.');
+      setIsSubmitting(false);
+      return;
+    }
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
+
     // Reset form
     setFormData({
       fullName: '',
@@ -78,7 +80,7 @@ export default function CampusAmbassador() {
       city: '',
       why: '',
       experience: '',
-      areaOfInterest: ''
+      areaOfInterest: '',
     });
 
     // Hide success message after 5 seconds
@@ -101,7 +103,7 @@ export default function CampusAmbassador() {
     { icon: Network, text: 'Networking opportunities' },
     { icon: TrendingUp, text: 'Real project exposure' },
     { icon: Globe, text: 'Social impact' },
-    { icon: Brain, text: 'Skill development' }
+    { icon: Brain, text: 'Skill development' },
   ];
 
   const roles = [
@@ -109,26 +111,26 @@ export default function CampusAmbassador() {
       icon: Megaphone,
       emoji: '📢',
       title: 'Promotion',
-      tasks: ['Spread awareness in college', 'Share initiatives']
+      tasks: ['Spread awareness in college', 'Share initiatives'],
     },
     {
       icon: Target,
       emoji: '🎯',
       title: 'Student Engagement',
-      tasks: ['Connect students with NGO', 'Organize participation']
+      tasks: ['Connect students with NGO', 'Organize participation'],
     },
     {
       icon: Calendar,
       emoji: '📅',
       title: 'Event Coordination',
-      tasks: ['Help conduct workshops', 'Manage activities']
+      tasks: ['Help conduct workshops', 'Manage activities'],
     },
     {
       icon: BarChart3,
       emoji: '📊',
       title: 'Reporting',
-      tasks: ['Share updates and progress']
-    }
+      tasks: ['Share updates and progress'],
+    },
   ];
 
   const programSteps = [
@@ -136,71 +138,63 @@ export default function CampusAmbassador() {
     { number: '2', title: 'Short Selection', description: 'Quick review' },
     { number: '3', title: 'Onboarding', description: 'Join the team' },
     { number: '4', title: 'Start Activities', description: 'Create impact' },
-    { number: '5', title: 'Get Recognition', description: 'Earn rewards' }
+    { number: '5', title: 'Get Recognition', description: 'Earn rewards' },
   ];
 
-  const eligibility = [
-    'College student',
-    'Active and motivated',
-    'Good communication'
-  ];
+  const eligibility = ['College student', 'Active and motivated', 'Good communication'];
 
-  const expectations = [
-    'Weekly contribution',
-    'Event participation',
-    'Responsibility'
-  ];
+  const expectations = ['Weekly contribution', 'Event participation', 'Responsibility'];
 
   const benefits = [
     'Certificate of completion',
     'Letter of recommendation',
     'Top performer recognition',
     'Leadership experience',
-    'Networking opportunities'
+    'Networking opportunities',
   ];
 
   const ambassadorImages = [
     'https://images.unsplash.com/photo-1558503902-11ef7728b282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwc3R1ZGVudHMlMjBjYW1wdXMlMjB1bml2ZXJzaXR5JTIwaW5kaWF8ZW58MXx8fHwxNzc0Mzc4NzA3fDA&ixlib=rb-4.1.0&q=80&w=1080',
     'https://images.unsplash.com/photo-1542868727-2666cd25399c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwc3R1ZGVudHMlMjBldmVudCUyMGNhbXB1cyUyMGFjdGl2aXR5fGVufDF8fHx8MTc3NDM3ODcwOHww&ixlib=rb-4.1.0&q=80&w=1080',
     'https://images.unsplash.com/photo-1762158007836-25d13ab34c1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwd29ya3Nob3AlMjBzdHVkZW50cyUyMGxlYXJuaW5nJTIwdG9nZXRoZXJ8ZW58MXx8fHwxNzc0Mzc4NzA4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1768796370407-6d36619e7d6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGxlYWRlcnMlMjBzdHVkZW50cyUyMGdyb3VwJTIwdGVhbXdvcmt8ZW58MXx8fHwxNzc0Mzc4NzA5fDA&ixlib=rb-4.1.0&q=80&w=1080'
+    'https://images.unsplash.com/photo-1768796370407-6d36619e7d6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGxlYWRlcnMlMjBzdHVkZW50cyUyMGdyb3VwJTIwdGVhbXdvcmt8ZW58MXx8fHwxNzc0Mzc4NzA5fDA&ixlib=rb-4.1.0&q=80&w=1080',
   ];
 
   const testimonials = [
     {
       quote: 'Amazing leadership experience.',
       description: 'I learned communication and teamwork.',
-      author: 'College Student'
+      author: 'College Student',
     },
     {
       quote: 'Helped me grow beyond academics.',
       description: 'Real exposure and impact.',
-      author: 'Ambassador'
-    }
+      author: 'Ambassador',
+    },
   ];
 
   const faqs = [
     { question: 'Is it paid?', answer: 'No' },
     { question: 'Will I get a certificate?', answer: 'Yes' },
     { question: 'Duration?', answer: 'Flexible' },
-    { question: 'Remote or offline?', answer: 'Both' }
+    { question: 'Remote or offline?', answer: 'Both' },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1 bg-white dark:bg-[#0D1F1C]">
         <div className="max-w-[1200px] mx-auto px-6 py-10">
-          
           {/* Hero Section - Compact Split Layout */}
           <div className="mb-10 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-3xl font-semibold text-[#111827] dark:text-white mb-3">
-                🎓 Become a Campus Ambassador
+                🎓 I got a chance to lead and learn
               </h1>
               <p className="text-base text-[#6B7280] dark:text-[#9CA3AF] mb-5">
-                Lead change in your college. Represent our NGO, build leadership skills, and create real impact.
+                Lead change in your college. Represent our NGO, build leadership skills, and create
+                real impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
@@ -237,7 +231,10 @@ export default function CampusAmbassador() {
                   key={index}
                   className="flex items-center gap-3 p-4 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-lg bg-white dark:bg-[#112F2B] hover:shadow-md transition-all duration-300"
                 >
-                  <item.icon size={20} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0" />
+                  <item.icon
+                    size={20}
+                    className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0"
+                  />
                   <span className="text-sm text-[#111827] dark:text-white">{item.text}</span>
                 </div>
               ))}
@@ -263,7 +260,10 @@ export default function CampusAmbassador() {
                   </div>
                   <ul className="space-y-2">
                     {role.tasks.map((task, idx) => (
-                      <li key={idx} className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
+                      <li
+                        key={idx}
+                        className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                      >
                         <span className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2">•</span>
                         {task}
                       </li>
@@ -286,14 +286,14 @@ export default function CampusAmbassador() {
                   className="relative text-center p-5 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl bg-[#F9FAFB] dark:bg-[#112F2B]"
                 >
                   <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-[#1E7A6E] dark:bg-[#4FD1C5] flex items-center justify-center">
-                    <span className="text-lg font-bold text-white dark:text-[#0D1F1C]">{step.number}</span>
+                    <span className="text-lg font-bold text-white dark:text-[#0D1F1C]">
+                      {step.number}
+                    </span>
                   </div>
                   <h3 className="text-sm font-semibold text-[#111827] dark:text-white mb-1">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-[#6B7280] dark:text-[#9CA3AF]">
-                    {step.description}
-                  </p>
+                  <p className="text-xs text-[#6B7280] dark:text-[#9CA3AF]">{step.description}</p>
                   {index < programSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 -right-2 w-4 h-0.5 bg-[#1E7A6E] dark:bg-[#4FD1C5]"></div>
                   )}
@@ -311,13 +311,19 @@ export default function CampusAmbassador() {
               {/* Eligibility */}
               <div className="border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl p-5 bg-white dark:bg-[#112F2B]">
                 <h3 className="text-base font-semibold text-[#111827] dark:text-white mb-4 flex items-center gap-2">
-                  <CheckCircle size={18} className="text-[#1E7A6E] dark:text-[#4FD1C5]" />
-                  ✅ Eligibility
+                  <CheckCircle size={18} className="text-[#1E7A6E] dark:text-[#4FD1C5]" />✅
+                  Eligibility
                 </h3>
                 <ul className="space-y-2">
                   {eligibility.map((item, index) => (
-                    <li key={index} className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
-                      <CheckCircle size={16} className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0" />
+                    <li
+                      key={index}
+                      className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                    >
+                      <CheckCircle
+                        size={16}
+                        className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2 mt-0.5 flex-shrink-0"
+                      />
                       {item}
                     </li>
                   ))}
@@ -332,7 +338,10 @@ export default function CampusAmbassador() {
                 </h3>
                 <ul className="space-y-2">
                   {expectations.map((item, index) => (
-                    <li key={index} className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
+                    <li
+                      key={index}
+                      className="text-sm text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                    >
                       <Star size={16} className="text-[#F4B400] mr-2 mt-0.5 flex-shrink-0" />
                       {item}
                     </li>
@@ -591,9 +600,7 @@ export default function CampusAmbassador() {
 
           {/* FAQs */}
           <div className="mb-10">
-            <h2 className="text-xl font-semibold text-[#111827] dark:text-white mb-5">
-              ❓ FAQs
-            </h2>
+            <h2 className="text-xl font-semibold text-[#111827] dark:text-white mb-5">❓ FAQs</h2>
             <div className="grid sm:grid-cols-2 gap-3">
               {faqs.map((faq, index) => (
                 <div
@@ -620,9 +627,7 @@ export default function CampusAmbassador() {
                     }`}
                   >
                     <div className="px-5 pb-3.5">
-                      <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">
-                        {faq.answer}
-                      </p>
+                      <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -653,7 +658,6 @@ export default function CampusAmbassador() {
               </a>
             </div>
           </div>
-
         </div>
       </main>
 
