@@ -39,7 +39,7 @@ export default function IntroLoader({ children }: { children: React.ReactNode })
       style={{
         position: 'fixed',
         inset: 0,
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

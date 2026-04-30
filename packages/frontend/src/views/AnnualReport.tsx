@@ -61,9 +61,9 @@ export default function AnnualReport() {
   ];
 
   const financialData = [
-    { category: 'Donations Received', amount: '2,50,000' },
-    { category: 'Program Expenses', amount: '1,80,000' },
-    { category: 'Operational Costs', amount: '50,000' },
+    { category: 'Donations Received', amount: '5,000' },
+    { category: 'Program Expenses', amount: '2,000' },
+    { category: 'Operational Costs', amount: '20,000' },
     { category: 'Savings / Balance', amount: '20,000' }
   ];
 

@@ -7,7 +7,7 @@ import { Footer } from '../components/Footer';
 import axios from 'axios';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 const BASE_URL = API_URL.endsWith('/api/v1') ? API_URL : `${API_URL}/api/v1`;
-import { 
+import {
   Award,
   Users,
   TrendingUp,
@@ -34,7 +34,7 @@ import {
   Rocket,
   Building,
   Landmark,
-  Download
+  Download,
 } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
@@ -47,35 +47,37 @@ export default function CorporatePartnership() {
     phone: '',
     industry: '',
     partnershipInterest: '',
-    message: ''
+    message: '',
   });
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-        await axios.post(`${BASE_URL}/forms/partnership`, formData);
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Failed to submit application. Please try again.');
-        setIsSubmitting(false);
-        return;
-      }
-    
+      await axios.post(`${BASE_URL}/forms/partnership`, formData);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit application. Please try again.');
+      setIsSubmitting(false);
+      return;
+    }
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
+
     // Reset form
     setFormData({
       companyName: '',
@@ -84,7 +86,7 @@ export default function CorporatePartnership() {
       phone: '',
       industry: '',
       partnershipInterest: '',
-      message: ''
+      message: '',
     });
 
     // Hide success message after 5 seconds
@@ -98,7 +100,9 @@ export default function CorporatePartnership() {
 
   const handleDownloadProposal = () => {
     // In a real application, this would trigger a PDF download
-    alert('Partnership proposal download will be available soon. Please contact us for more information.');
+    alert(
+      'Partnership proposal download will be available soon. Please contact us for more information.'
+    );
   };
 
   const whyPartner = [
@@ -107,7 +111,7 @@ export default function CorporatePartnership() {
     { icon: TrendingUp, text: 'Scalable programs' },
     { icon: Network, text: 'Strong volunteer network' },
     { icon: BarChart3, text: 'Measurable outcomes' },
-    { icon: Users, text: 'Community-level execution' }
+    { icon: Users, text: 'Community-level execution' },
   ];
 
   const partnershipAreas = [
@@ -115,38 +119,38 @@ export default function CorporatePartnership() {
       icon: GraduationCap,
       emoji: '🎓',
       title: 'Education Support',
-      items: ['Digital literacy', 'School programs']
+      items: ['Digital literacy', 'School programs'],
     },
     {
       icon: Heart,
       emoji: '👩‍💼',
       title: 'Women Empowerment',
-      items: ['Skill training', 'Livelihood']
+      items: ['Skill training', 'Livelihood'],
     },
     {
       icon: Briefcase,
       emoji: '🎭',
       title: 'Skill Development',
-      items: ['Training + cultural exposure']
+      items: ['Training + cultural exposure'],
     },
     {
       icon: Activity,
       emoji: '🩺',
       title: 'Health Initiatives',
-      items: ['Camps + awareness']
+      items: ['Camps + awareness'],
     },
     {
       icon: Leaf,
       emoji: '🌿',
       title: 'Environment',
-      items: ['Tree plantation', 'Clean campaigns']
+      items: ['Tree plantation', 'Clean campaigns'],
     },
     {
       icon: Home,
       emoji: '🌾',
       title: 'Rural Development',
-      items: ['Community programs']
-    }
+      items: ['Community programs'],
+    },
   ];
 
   const partnershipModels = [
@@ -154,33 +158,33 @@ export default function CorporatePartnership() {
       icon: DollarSign,
       emoji: '💳',
       title: 'Funding Support',
-      description: 'Sponsor programs'
+      description: 'Sponsor programs',
     },
     {
       icon: UserPlus,
       emoji: '🧑‍🤝‍🧑',
       title: 'Employee Engagement',
-      description: 'Volunteer opportunities'
+      description: 'Volunteer opportunities',
     },
     {
       icon: Zap,
       emoji: '🎯',
       title: 'Project Sponsorship',
-      description: 'Fund specific initiatives'
+      description: 'Fund specific initiatives',
     },
     {
       icon: Handshake,
       emoji: '🤝',
       title: 'Long-Term Partnership',
-      description: 'Ongoing collaboration'
-    }
+      description: 'Ongoing collaboration',
+    },
   ];
 
   const impactStats = [
     { emoji: '🎓', value: '1200+', label: 'Students' },
     { emoji: '🌍', value: '12+', label: 'Villages' },
     { emoji: '🤝', value: '60+', label: 'Volunteers' },
-    { emoji: '📚', value: '150+', label: 'Sessions' }
+    { emoji: '📚', value: '150+', label: 'Sessions' },
   ];
 
   const valueProposition = [
@@ -188,52 +192,51 @@ export default function CorporatePartnership() {
     'Brand visibility',
     'Employee engagement',
     'Impact reports',
-    'Recognition'
+    'Recognition',
   ];
 
   const reportingItems = [
     'Detailed reports',
     'Fund utilization breakdown',
     'Regular updates',
-    'Documentation'
+    'Documentation',
   ];
 
   const workImages = [
     'https://images.unsplash.com/photo-1758518727707-b023e285b709?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmclMjBwYXJ0bmVyc2hpcCUyMG9mZmljZXxlbnwxfHx8fDE3NzQzNzk2NDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     'https://images.unsplash.com/photo-1748176952054-db738247a927?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGNvcnBvcmF0ZSUyMGNvbGxhYm9yYXRpb24lMjBpbmRpYXxlbnwxfHx8fDE3NzQzNzk2NDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     'https://images.unsplash.com/photo-1758518732175-5d608ba3abdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZyUyMGNvcnBvcmF0ZSUyMG9mZmljZSUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzQzNzk2NDF8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1744854188498-4344f2504a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBzb2NpYWwlMjByZXNwb25zaWJpbGl0eSUyMGNvbW11bml0eSUyMHdvcmt8ZW58MXx8fHwxNzc0Mzc5NjQxfDA&ixlib=rb-4.1.0&q=80&w=1080'
+    'https://images.unsplash.com/photo-1744854188498-4344f2504a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBzb2NpYWwlMjByZXNwb25zaWJpbGl0eSUyMGNvbW11bml0eSUyMHdvcmt8ZW58MXx8fHwxNzc0Mzc5NjQxfDA&ixlib=rb-4.1.0&q=80&w=1080',
   ];
 
   const whoCanPartner = [
     { icon: Building2, label: 'Corporates' },
     { icon: Rocket, label: 'Startups' },
     { icon: Building, label: 'Institutions' },
-    { icon: Landmark, label: 'Foundations' }
+    { icon: Landmark, label: 'Foundations' },
   ];
 
   const faqs = [
-    { 
-      question: 'Is this CSR only?', 
-      answer: 'No, open for all partnerships' 
+    {
+      question: 'Is this CSR only?',
+      answer: 'No, open for all partnerships',
     },
-    { 
-      question: 'Do you provide reports?', 
-      answer: 'Yes' 
+    {
+      question: 'Do you provide reports?',
+      answer: 'Yes',
     },
-    { 
-      question: 'Can we sponsor specific programs?', 
-      answer: 'Yes' 
-    }
+    {
+      question: 'Can we sponsor specific programs?',
+      answer: 'Yes',
+    },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       <main className="flex-1 bg-white dark:bg-[#0D1F1C]">
         <div className="max-w-[1280px] mx-auto px-6 py-12">
-          
           {/* Hero Section - Split Layout */}
           <div className="mb-12 grid md:grid-cols-2 gap-10 items-center">
             <div>
@@ -241,7 +244,8 @@ export default function CorporatePartnership() {
                 🤝 Partner With Us for Meaningful Impact
               </h1>
               <p className="text-lg text-[#6B7280] dark:text-[#9CA3AF] mb-6">
-                Collaborate with us to create scalable, measurable, and sustainable social impact through corporate partnerships.
+                Collaborate with us to create scalable, measurable, and sustainable social impact
+                through corporate partnerships.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
@@ -261,7 +265,7 @@ export default function CorporatePartnership() {
             </div>
             <div className="rounded-xl overflow-hidden border border-[#E5E7EB] dark:border-[#1F4D47] h-80">
               <ImageWithFallback
-                src={workImages[0]}
+                src="images/partner.png"
                 alt="Corporate partnership meeting"
                 className="w-full h-full object-cover"
               />
@@ -279,7 +283,10 @@ export default function CorporatePartnership() {
                   key={index}
                   className="flex items-center gap-4 p-5 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-lg bg-white dark:bg-[#112F2B] hover:shadow-lg transition-all duration-300"
                 >
-                  <item.icon size={24} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0" />
+                  <item.icon
+                    size={24}
+                    className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0"
+                  />
                   <span className="text-base text-[#111827] dark:text-white">{item.text}</span>
                 </div>
               ))}
@@ -305,7 +312,10 @@ export default function CorporatePartnership() {
                   </div>
                   <ul className="space-y-2">
                     {area.items.map((item, idx) => (
-                      <li key={idx} className="text-base text-[#6B7280] dark:text-[#9CA3AF] flex items-start">
+                      <li
+                        key={idx}
+                        className="text-base text-[#6B7280] dark:text-[#9CA3AF] flex items-start"
+                      >
                         <span className="text-[#1E7A6E] dark:text-[#4FD1C5] mr-2">•</span>
                         {item}
                       </li>
@@ -333,9 +343,7 @@ export default function CorporatePartnership() {
                   <h3 className="text-base font-semibold text-[#111827] dark:text-white mb-2">
                     {model.title}
                   </h3>
-                  <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">
-                    {model.description}
-                  </p>
+                  <p className="text-sm text-[#6B7280] dark:text-[#9CA3AF]">{model.description}</p>
                 </div>
               ))}
             </div>
@@ -353,9 +361,7 @@ export default function CorporatePartnership() {
                   <div className="text-3xl font-bold text-[#1E7A6E] dark:text-[#4FD1C5] mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-base text-[#6B7280] dark:text-[#9CA3AF]">
-                    {stat.label}
-                  </div>
+                  <div className="text-base text-[#6B7280] dark:text-[#9CA3AF]">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -370,7 +376,10 @@ export default function CorporatePartnership() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {valueProposition.map((value, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0 mt-0.5" />
+                    <CheckCircle
+                      size={20}
+                      className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0 mt-0.5"
+                    />
                     <span className="text-base text-[#111827] dark:text-white">{value}</span>
                   </div>
                 ))}
@@ -384,13 +393,14 @@ export default function CorporatePartnership() {
               📄 Reporting & Transparency
             </h2>
             <div className="border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl p-8 bg-white dark:bg-[#112F2B]">
-              <p className="text-base text-[#6B7280] dark:text-[#9CA3AF] mb-5">
-                We provide:
-              </p>
+              <p className="text-base text-[#6B7280] dark:text-[#9CA3AF] mb-5">We provide:</p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {reportingItems.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <FileText size={20} className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0 mt-0.5" />
+                    <FileText
+                      size={20}
+                      className="text-[#1E7A6E] dark:text-[#4FD1C5] flex-shrink-0 mt-0.5"
+                    />
                     <span className="text-base text-[#111827] dark:text-white">{item}</span>
                   </div>
                 ))}
@@ -431,7 +441,9 @@ export default function CorporatePartnership() {
                   className="flex flex-col items-center gap-3 p-6 border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl bg-white dark:bg-[#112F2B] hover:shadow-lg transition-all duration-300"
                 >
                   <partner.icon size={32} className="text-[#1E7A6E] dark:text-[#4FD1C5]" />
-                  <span className="text-base font-medium text-[#111827] dark:text-white">{partner.label}</span>
+                  <span className="text-base font-medium text-[#111827] dark:text-white">
+                    {partner.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -469,7 +481,8 @@ export default function CorporatePartnership() {
                 <div className="mb-6 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-600 rounded-lg p-5 flex items-center gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400 flex-shrink-0" />
                   <p className="text-base text-green-800 dark:text-green-200">
-                    Thank you for your interest! Our team will review your inquiry and contact you shortly.
+                    Thank you for your interest! Our team will review your inquiry and contact you
+                    shortly.
                   </p>
                 </div>
               )}
@@ -614,9 +627,7 @@ export default function CorporatePartnership() {
 
           {/* FAQs */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-[#111827] dark:text-white mb-6">
-              ❓ FAQs
-            </h2>
+            <h2 className="text-2xl font-semibold text-[#111827] dark:text-white mb-6">❓ FAQs</h2>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <div
@@ -643,9 +654,7 @@ export default function CorporatePartnership() {
                     }`}
                   >
                     <div className="px-6 pb-4">
-                      <p className="text-base text-[#6B7280] dark:text-[#9CA3AF]">
-                        {faq.answer}
-                      </p>
+                      <p className="text-base text-[#6B7280] dark:text-[#9CA3AF]">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -659,7 +668,8 @@ export default function CorporatePartnership() {
               🚀 Let's Build Impact Together
             </h2>
             <p className="text-lg text-[#6B7280] dark:text-[#9CA3AF] mb-6 max-w-2xl mx-auto">
-              Join hands with us to create sustainable change and make a real difference in communities.
+              Join hands with us to create sustainable change and make a real difference in
+              communities.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button
@@ -676,7 +686,6 @@ export default function CorporatePartnership() {
               </a>
             </div>
           </div>
-
         </div>
       </main>
 

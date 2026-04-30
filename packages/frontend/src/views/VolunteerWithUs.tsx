@@ -145,12 +145,12 @@ export default function VolunteerWithUs() {
       quote: 'A meaningful experience.',
       description:
         'This experience taught me teamwork, responsibility, and the joy of helping others.',
-      author: 'Volunteer',
+      author: 'Anil kumar',
     },
     {
       quote: 'I learned more than I expected.',
       description: 'It was more than volunteering—it was life-changing.',
-      author: 'Student Volunteer',
+      author: 'Aditya',
     },
   ];
 

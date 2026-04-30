@@ -166,12 +166,12 @@ export default function Internship() {
     {
       quote: 'Great learning experience.',
       description: 'I learned by doing real work, not just theory.',
-      author: 'Intern',
+      author: 'Eswar',
     },
     {
-      quote: 'Helped me build my portfolio.',
+      quote: 'Helped me to build my portfolio.',
       description: 'It helped me build my skills and think more practically.',
-      author: 'Student',
+      author: 'Aditya Raj',
     },
   ];
 

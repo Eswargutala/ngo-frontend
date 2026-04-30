@@ -13,13 +13,13 @@ export default function Testimonials() {
       title: 'This program gave me clarity.',
       description: 'A student shares how career guidance helped in choosing the right path.',
       category: '🎓 Student Story',
-      videoId: 'dQw4w9WgXcQ', // Placeholder - replace with actual video ID
+      videoId: '2kUnq43YHCc', // ✅ your real video
     },
     {
       title: 'Now I earn with dignity.',
       description: 'A participant explains how skill training created income opportunities.',
       category: '👩‍💼 Women Empowerment',
-      videoId: 'dQw4w9WgXcQ', // Placeholder - replace with actual video ID
+      videoId: '2kUnq43YHCc', // 👉 duplicate for now (replace later if you have another video)
     },
   ];
 
@@ -73,8 +73,8 @@ export default function Testimonials() {
       emoji: '🤝',
       quote: 'A meaningful experience.',
       text: 'Working with the NGO helped me grow personally and contribute to society.',
-      author: 'Volunteer',
-      role: 'Volunteer',
+      author: 'Anil Kumar',
+      role: 'Anil Kumar',
       avatar:
         'https://images.unsplash.com/photo-1758599668209-783bd3691ec8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXIlMjB5b3VuZyUyMHBlcnNvbiUyMHNtaWxpbmd8ZW58MXx8fHwxNzc0Mzc2NTUyfDA&ixlib=rb-4.1.0&q=80&w=1080',
     },
@@ -133,16 +133,18 @@ export default function Testimonials() {
                   className="border border-[#E5E7EB] dark:border-[#1F4D47] rounded-xl p-4 space-y-2 bg-white dark:bg-[#112F2B]"
                 >
                   {/* Video Embed */}
-                  <div className="relative w-full h-40 bg-gradient-to-br from-[#1E7A6E]/20 to-[#F4B400]/20 dark:from-[#1E7A6E]/30 dark:to-[#F4B400]/30 rounded-lg overflow-hidden">
+                  <div className="relative w-full aspect-video bg-gradient-to-br from-[#1E7A6E]/20 to-[#F4B400]/20 dark:from-[#1E7A6E]/30 dark:to-[#F4B400]/30 rounded-lg overflow-hidden">
                     <iframe
                       src={`https://www.youtube.com/embed/${video.videoId}`}
-                      className="w-full h-full rounded-lg"
+                      className="w-full h-full"
+                      frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       title={video.title}
                     />
+
                     {/* Category Badge */}
-                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-white/90 dark:bg-[#0D1F1C]/90 backdrop-blur-sm rounded-md">
+                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-white/90 dark:bg-[#0D1F1C]/90 backdrop-blur-sm rounded-md z-10">
                       <span className="text-xs font-medium text-[#111827] dark:text-white">
                         {video.category}
                       </span>
